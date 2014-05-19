@@ -32,6 +32,8 @@ def ckan_call_api(method, **kwargs):
     except Exception as e:
         traceback.print_exc()
         print(r)
+        print(r.headers)
+        print(r.content)
 
 
 conn = sqlite3.connect('datasety.db')
@@ -50,7 +52,13 @@ cursor = conn.execute("""
 
 for dataset_id, title in cursor:
     print("Searching for %s" % (title,))
-    res = ckan_call_api('search/dataset', q=title)
+    # TODO: try to search by notes as well to improve matches.
+    res = ckan_call_api('search/dataset', q=title.replace(':', ''),
+                        limit=20)
+
+    if res is None:
+        print("Skipping, error on request.")
+        continue
     if res['count'] == 0:
         print("Nothing found.")
         continue
@@ -88,3 +96,6 @@ for dataset_id, title in cursor:
             candidate,
             dataset_id,
         ))
+    else:
+        # TODO: mark those without a match
+        pass
