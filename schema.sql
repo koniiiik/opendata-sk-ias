@@ -66,4 +66,13 @@ CREATE TABLE ckan_dataset(
     ckan_id varchar(40) unique not null,
     ckan_name text unique not null,
     dataset_id integer references dataset (id)
+
+CREATE TABLE ckan_resource(
+    ckan_id varchar(40) not null,
+    ckan_name text not null,
+    status text,
+    url text,
+    star INT,
+    guessed_ext varchar(20),
+    content_type text
 );
