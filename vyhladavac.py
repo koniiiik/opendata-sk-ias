@@ -40,42 +40,43 @@ conn = sqlite3.connect('datasety.db')
 
 conn.isolation_level = None
 
-conn.execute("""
-    DELETE FROM ckan_dataset
-""")
-
 cursor = conn.execute("""
     SELECT id, nazov
     FROM dataset
+    WHERE NOT EXISTS (
+        SELECT *
+        FROM ckan_dataset
+        WHERE ckan_dataset.dataset_id = dataset.id
+    )
     ORDER BY id
 """)
 
 for dataset_id, title in cursor:
-    print("Searching for %s" % (title,))
+    print("Searching for %s; id=%d" % (title, dataset_id))
     # TODO: try to search by notes as well to improve matches.
     res = ckan_call_api('search/dataset', q=title.replace(':', ''),
-                        limit=20)
+                        limit=20, all_fields=1)
 
     if res is None:
         print("Skipping, error on request.")
         continue
-    if res['count'] == 0:
-        print("Nothing found.")
-        continue
 
     found = False
+
+    if res['count'] == 0:
+        print("Nothing found.")
+
     candidates = []
     for candidate in res['results']:
-        candidate_info = ckan_call_api('rest/dataset/%s' % (candidate,),
-                                       limit=20)
+        candidate_info = json.loads(candidate['data_dict'])
         if candidate_info['title'] == title:
-            print("Found match: %s" % (candidate,))
-            found = (candidate_info['id'], candidate, dataset_id)
+            print("Found match: %s" % (candidate_info['name'],))
+            found = (candidate_info['id'], candidate_info['name'], dataset_id)
             break
         else:
             candidates.append((candidate_info['title'],
                                candidate_info['id'],
-                               candidate, dataset_id))
+                               candidate_info['name'], dataset_id))
 
     if (not found and candidates):
         for i, c in enumerate(candidates):
@@ -88,14 +89,9 @@ for dataset_id, title in cursor:
         except (ValueError, IndexError):
             print("Skipping.")
 
-    if found:
-        conn.execute("""
-            INSERT INTO ckan_dataset VALUES (?,?,?)
-        """, (
-            candidate_info['id'],
-            candidate,
-            dataset_id,
-        ))
-    else:
-        # TODO: mark those without a match
-        pass
+    if not found:
+        found = (None, None, dataset_id)
+
+    conn.execute("""
+        INSERT INTO ckan_dataset VALUES (?,?,?)
+    """, found)
