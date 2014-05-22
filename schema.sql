@@ -65,7 +65,7 @@ CREATE TABLE strukturovane(
 CREATE TABLE ckan_dataset(
     ckan_id varchar(40),
     ckan_name text,
-    dataset_id integer references dataset (id)
+    dataset_id integer references dataset (id));
 
 CREATE TABLE ckan_resource(
     ckan_id varchar(40) not null,
