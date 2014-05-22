@@ -3,3 +3,6 @@ select f.nazov, count(df.dataset_id) from format f inner join dataset_format df 
 
 zverejnene_prevadzkovatel.eps
 select x.prevadzkovatel, x.cnt, y.cnt from (select prevadzkovatel, count(id) as cnt from view_dataset_wide where zverejnitelnost in ('zverejnitelne', 'ciastocne') and vyjadrenie= 'suhlas' group by prevadzkovatel order by prevadzkovatel) x inner join (select prevadzkovatel, count(id) as cnt from view_dataset_wide d where exists(select * from ckan_dataset c where dataset_id = d.id and c.ckan_id is not null) group by prevadzkovatel) y on x.prevadzkovatel = y.prevadzkovatel;
+
+nezverejnene_formaty.eps
+select f.nazov, count(d.id) from not_zverejnene d inner join dataset_format df on df.dataset_id = d.id inner join format f on f.id = df.format_id where zverejnitelnost in ('zverjnitelne', 'ciastocne') group by f.id
