@@ -1,0 +1,670 @@
+
+ Štátna správa (bez písmena E je priebežný počet 49 inštitúcií)
+A) Kancelária prezidenta SR
+B) Národná rada SR
+C) Ministerstvá (13)
+a) Ministerstvo dopravy, výstavby a regionálneho rozvoja SR
+b) Ministerstvo financií SR
+c) Ministerstvo hospodárstva SR
+d) Ministerstvo kultúry SR
+e) Ministerstvo obrany SR
+f)
+ Ministerstvo pôdohospodárstva a rozvoja vidieka SR
+g) Ministerstvo práce, sociálnych vecí a rodiny SR
+h) Ministerstvo spravodlivosti SR
+i)
+ Ministerstvo školstva SR
+j)
+ Ministerstvo vnútra SR
+k) Ministerstvo zahraničných vecí a európskych záležitostí SR
+l)
+ Ministerstvo zdravotníctva SR
+m) Ministerstvo životného prostredia SR
+D) Ústredné orgány štátnej správy (10)
+a) Národný bezpečnostný úrad
+b) Protimonopolný úrad SR
+c) Správa štátnych hmotných rezerv SR
+d) Štatistický úrad SR
+e) Úrad geodézie, kartografie a katastra SR
+f)
+ Úrad jadrového dozoru SR
+g) Úrad pre normalizáciu, metrológiu a skúšobníctvo SR
+h) Úrad pre verejné obstarávanie
+i)
+ Úrad priemyselného vlastníctva SR
+j)
+ Úrad vlády SR
+E) Rozpočtové, príspevkové, neziskové a podnikateľské organizácie, akciové a obchodné spoločnosti,
+štátne podniky ministerstiev a ústredných orgánov štátnej správy (priebežný stav 260)
+a) Ministerstvo dopravy, výstavby a regionálneho rozvoja SR (25)
+• Vizuálna mapa organizácií v prílohe VII.2
+• Zoznam organizácií a ich webové stránky v prílohe VII.3
+b) Ministerstvo financií SR (35)
+• Vizuálna mapa organizácií v prílohe VII.4
+• Zoznam organizácií a ich webové stránky v prílohe VII.5
+c)••Ministerstvo hospodárstva SR (65)
+Vizuálna mapa organizácií v prílohe VII.6
+Zoznam organizácií a ich webové stránky v prílohe VII.7
+d)••Ministerstvo kultúry SR (29)
+Vizuálna mapa organizácií v prílohe VII.8
+Zoznam organizácií a ich webové stránky v prílohe VII.9
+e)••Ministerstvo obrany SR (86)
+Vizuálna mapa organizácií v prílohe VII.10
+Zoznam organizácií a ich webové stránky v prílohe VII.11
+f)
+Ministerstvo pôdohospodárstva a rozvoja vidieka SR (20)
+Vizuálna mapa organizácií v prílohe VII.12
+Zoznam organizácií a ich webové stránky v prílohe VII.13
+F) Ďalšie inštitúcie štátnej správy (24)
+a) Fond národného majetku SR
+b) Generálna prokuratúra SR
+c) Inštitút pre výskum práce a rodiny
+d) Kancelária verejného ochrancu práv
+e) Najvyšší kontrolný úrad SR
+f)
+ Najvyšší súd SR
+g) Národná agentúra pre sieťové a elektronické služby (NASES)
+h) Národná banka Slovenska
+i)
+ Národný inšpektorát práce
+j)
+ Pamiatkový úrad SR
+k) Poštový regulačný úrad
+l)
+ Slovenská akadémia vied
+m) Slovenské dokumentačné a informačné stredisko sociálnej ochrany
+n) Slovenské národné stredisko pre ľudské práva
+o) Slovenský metrologický ústav
+p) Slovenský ústav technickej normalizácie
+q) Sociálna poisťovňa
+r)
+ Telekomunikačný úrad
+s) Tlačová agentúra SR
+t)
+ Úrad na ochranu osobných údajov SR
+u) Úrad pre reguláciu sieťových odvetví
+v) Úrad pre Slovákov žijúcich v zahraničí
+w) Ústav pamäti národa
+x) Ústavný súd SR
+2)
+ Samospráva (počet 2977 inštitúcií)
+A) Vyššie územné celky (8)
+a) Banskobystrický samosprávny kraj
+b) Bratislavský samosprávny kraj
+c) Košický samosprávny kraj
+d) Nitriansky samosprávny kraj
+e)f)
+g)h)Prešovský samosprávny kraj
+Trenčiansky samosprávny kraj
+Trnavský samosprávny kraj
+Žilinský samosprávny kraj
+B) Krajské mestá (8)
+a) Banská Bystrica
+b) Bratislava
+c) Košice
+d) Nitra
+e) Prešov
+f)
+ Trenčín
+g) Trnava
+h) Žilina
+C) Okresné mestá (79)
+D) Mestá (90)
+E) Mestské časti (39)
+a) Bratislava (17)
+Bratislava-Čunovo
+Bratislava-Devín
+Bratislava-Devínska Nová Ves
+Bratislava-Dúbravka
+Bratislava-Jarovce
+Bratislava-Karlova Ves
+Bratislava-Lamač
+Bratislava-Nové Mesto
+Bratislava-Petržalka
+Bratislava-Podunajské Biskupice
+Bratislava-Rača
+Bratislava-Rusovce
+Bratislava-Ružinov
+Bratislava-Staré Mesto
+Bratislava-Vajnory
+Bratislava-Vrakuňa
+Bratislava-Záhorská Bystrica
+b) Košice (22)
+Košice-Barca
+Košice-Dargovských Hrdinov
+Košice-Džungľa
+Košice-Juh
+Košice-Kavečany
+Košice-Košická Nová Ves
+Košice-Krásna
+Košice-KVP
+Košice-Lorinčík
+Košice-Lunik IX
+Košice-Myslava
+Košice-nad Jazerom
+Košice-Pereš
+Košice-Poľov
+Košice-Sever
+Košice-Sídlisko Ťahanovce
+Košice-Staré Mesto
+Košice-Šaca
+Košice-Šebastovce
+Košice-Ťahanovce
+Košice-Vyšné Opátske
+Košice-Západ
+Obce (2753)
+
+ Tretí sektor (ako príklad uvádzam niektoré asociácie, spoločnosti, združenia, zväzy, MVO)
+
+Aliancia Fair-play
+Asociácia poskytovateľov hospodárskych informácií
+Asociácia pre podporu ekonomickej liberalizácie (APEL – organizátor kongresu ITAPA)
+Asociácia pre mládež, vedu a techniku (AMAVET)
+Asociácia prednostov úradov miestnej samosprávy v SR (APUMS)
+členovia: http://www.apums.sk/?id_menu=38170
+Centrum pre filantropiu
+Centrum rozvoja samospráv
+eSlovensko
+Inštitút pre verejné otázky
+Kartografická spoločnosť SR
+Komora geodetov a kartografov
+Partnerstvá pre prosperitu
+http://www.p3.sk/horne-menu/clenstvo-v-ppp/individualne-clenstvo/
+http://www.p3.sk/horne-menu/clenstvo-v-ppp/clenovia-pravnicke-osoby/
+Slovenská geografická spoločnosť pri SAV
+Slovenská kancelária poisťovateľov
+Slovenská obchodná a priemyselná komora
+Slovenská živnostenská komora
+Slovenský zväz bytových družstiev
+Spoločnosť pre otvorené informačné technológie (SOIT)
+Stála konferencia organizácií III. sektora SR
+Transparency International Slovensko
+Únia miest Slovenska (ÚMS)
+Utópia
+Zamestnávateľský zväz geodézie a kartografie
+Združenie historických miest a obcí SR (ZHMaO)
+Združenie informatikov samospráv Slovenska (ZISS)
+členovia: http://www.ziss.sk/clenovia.phtml?sub=zoznam_clenov
+Združenie miest a obcí Slovenska (ZMOS)
+Združenie primátorov krajských miest SR (K8)
+Združenie samosprávnych krajov v SR (SK8)
+Zväz cestovného ruchu SR
+
+Zoznam organizácií Ministerstva dopravy, výstavby a regionálneho rozvoja SR
+a ich webové stránky
+Neziskové organizácie
+Výskumný ústav spojov
+http://www.vus.sk
+Obchodné spoločnosti s majetkovou účasťou štátu
+Letisko Košice – Airport Košice, a.s.
+http://www.airportkosice.sk
+Letisko M.R.Štefánika – Airport Bratislava, a.s.
+http://www.letiskobratislava.sk
+Letisko Piešťany, a.s.
+http://www.airport-piestany.sk
+Letisko Poprad – Tatry, a.s.
+http://www.letisko-poprad.sk
+Letisko Sliač, a.s.
+http://www.airportsliac.sk
+Letisková spoločnosť Žilina, a.s.
+http://www.airport.sk
+METRO Bratislava, a.s.
+http://www.metroba.sk
+Národná diaľničná spoločnosť, a.s.
+http://www.ndsas.sk
+Poštová banka, a.s.
+http://www.pabk.sk
+Slovenská pošta, a.s.
+http://www.posta.sk
+Slovenské aerolínie, akciová spoločnosť v konkurze
+http://www.slovakairlines.sk
+Technická obnova a ochrana železníc, a.s.
+http://www.tooz.sk
+Verejné prístavy, a.s.
+http://www.vpas.sk
+Železničná spoločnosť Cargo Slovakia, a.s.
+http://www.zscargo.sk
+Železničná spoločnosť Slovensko, a.s.
+http://www.slovakrail.sk
+Príspevkové organizácie
+Slovenská agentúra pre cestovný ruch
+http://www.sacr.sk
+Rozpočtové organizácie
+Agentúra rozvoja vodnej dopravy
+http://www.arvd.gov.sk
+Dopravný úrad
+http://www.nsat.sk
+Slovenská správa ciest
+http://www.ssc.sk
+Slovenská stavebná inšpekcia
+http://www.ssiri.sk
+Štátny fond rozvoja bývania
+http://www.sfrb.sk
+Úrad pre reguláciu elektronických komunikácií a poštových služieb
+http://www.teleoff.gov.sk
+Štátne podnikateľské organizácie
+Letové prevádzkové služby SR
+http://www.lps.sk
+Železnice SR
+http://www.zsr.sk
+ŽSR – Centrum logistiky a obstarávania
+ŽSR – Stredisko hospodárenia s majetkom Bratislava
+ŽSR – Ústredný inštitút vzdelávania a psychológie Bratislava
+ŽSR – Výskumný a vývojový ústav železníc Žilina
+ŽSR – Závod protipožiarnej ochrany železníc Bratislava
+ŽSR – Závod služieb železníc Bratislava
+ŽSR – Železničné telekomunikácie Bratislava
+ŽSR – Železničné zdravotníctvo Bratislava
+Zoznam organizácií Ministerstva financií SR a ich webové stránky
+Organizácie kapitoly MF SR
+Agentúra pre riadenie dlhu a likvidity
+http://www.ardal.sk
+DataCentrum, Bratislava
+http://www.datacentrum.sk
+Finančná správa SR
+http://www.financnasprava.sk
+Colné úrady
+https://www.financnasprava.sk/sk/financna-sprava/organy-financnej-spravy/colne-urady
+8 colných úradov v sídlach VÚC s pobočkami CÚ a stanicami CÚ
+1 CÚ v Michalovciach
+Daňové úrady
+https://www.financnasprava.sk/sk/financna-sprava/organy-financnej-spravy/danove-urady
+8 daňových úradov v sídlach VÚC s pobočkami / kontaktnými miestami DÚ
+1 DÚ pre vybrané daňové subjekty
+Finančné riaditeľstvo SR
+https://www.financnasprava.sk/sk/financna-sprava/organy-financnej-spravy/financne-riaditelstvo
+Kompetenčné centrum finančných operácií
+https://www.financnasprava.sk/sk/kontakt/financne-riaditelstvo-sr
+Kriminálny úrad FS SR
+https://www.financnasprava.sk/sk/financna-sprava/organy-financnej-spravy/kriminalny-urad-fs
+Správa finančnej kontroly, Bratislava
+http://www.sfkba.sk
+Správa finančnej kontroly, Košice
+http://www.sfkke.sk
+Správa finančnej kontroly, Zvolen
+http://www.sfkzv.sk
+Štátna pokladnica
+http://www.pokladnica.sk
+Vzdelávacie a doškoľovacie zariadenie VS – Financie, Tatranská Lomnica
+http://www.vdz-financie.sk
+Organizácie s účasťou štátu, v ktorých MF SR plní zakladateľské funkcie, resp. výkon akcionárskych práv
+Exportno – importná banka SR
+http://www.eximbanka.sk
+Mincovňa Kremnica, š.p.
+http://www.mincovna.sk
+RVS, a.s.
+http://www.rvs.sk
+Slovenská elektrizačná prenosová sústava, a.s.
+http://www.sepsas.sk
+Slovenská konsolidačná, a.s.
+http://www.konsolidacna.sk
+Slovenská záručná a rozvojová banka, a.s.
+http://www.szrb.sk
+TIPOS, národná lotériová spoločnosť, a.s.
+http://www.tipos.sk
+Zoznam organizácií Ministerstva hospodárstva SR a ich webové stránky
+Akciové spoločnosti
+Jadrová a vyraďovacia spoločnosť, a.s.
+http://www.javys.sk
+Slovak Telekom, a.s.
+http://www.slovaktelekom.sk
+Slovenské elektrárne, a.s.
+http://www.seas.sk
+Slovenský plynárenský priemysel, a.s.
+http://www.spp.sk
+Stredoslovenská energetika, a.s.
+http://www.sse.sk
+Transpetrol, a.s.
+http://www.transpetrol.sk
+Východoslovenská energetika, a.s.
+http://www.vse.sk
+Západoslovenská energetika, a.s.
+http://www.zse.sk
+Národný jadrový fond
+http://www.njf.sk
+Neziskové organizácie
+EKONOM-SERVIS, n. o., v likvidácii
+Európska vzdelávacia akadémia, n. o.
+Príspevkové organizácie
+Múzeum obchodu Bratislava
+http://www.muzeumobchoduba.sk
+Slovenská agentúra pre rozvoj investícií a obchodu
+http://www.sario.sk
+Slovenská inovačná a energetická agentúra
+http://www.siea.sk
+Rozpočtové organizácie
+Hlavný banský úrad
+http://www.hbu.sk
+Puncový úrad SR
+http://www.puncovyurad.sk
+Slovenská obchodná inšpekcia
+http://www.soi.sk
+Štátna energetická inšpekcia
+http://www.sei.sk
+Spoločnosti s ručením obmedzeným
+MH Development, s.r.o.
+MH Invest, s.r.o.
+http://www.mhinvest.sk
+Štátne podniky
+Rudné bane, š. p.
+http://www.rudnebane.sk
+Štátne podniky v konkurze
+Agris , š.p., Bratislava
+BEZ Bratislava, š.p.
+DOMÁCE POTREBY Bratislava, š.p.
+DOMÁCE POTREBY Prešov, š.p.
+DOMEP Michalovce, š.p.
+DREVINA Sučany, š.p.
+DREVONA Banská Bystrica, š.p.
+DROBNÝ TOVAR Banská Bystrica, š.p.
+Drobný tovar š.p. Bratislava
+DROGÉRIE Žilina, š.p.
+DUNAPLAST Veľký Meder, š.p.
+GOSSYCOM, ZT, Kúty, š.p.
+Kameňolomy a štrkopiesky Trstín, š.p.
+KOVOŠROT Bratislava, š.p.
+Luna Nitra, š.p.
+Medika, š.p., Bratislava
+Montostroj Bratislava, š.p.
+NAPO Partizánske, š.p.
+OTEX-ODEVY Žilina, š.p.
+Plemenárske služby, š.p., Ivánka pri Dunaji
+PLETA Banská Štiavnica, š.p.
+Podnik servisných a soc. služieb Trnava, š.p.
+Pozemné stavby – GK Prešov, š.p.
+Pozemné stavby HSV Žilina, š.p.
+Pozemné stavby Košice, š.p.
+Pozemné stavby Michalovce, š.p.
+Pozemné stavby Trnava, š.p.
+Pozemné stavby Veľký Krtíš, š.p.
+Pozemné stavby Zvolen, š.p.
+Prefa Michalovce , š.p.
+Stavebný podnik Moldava nad Bodvou, š.p.
+TAZ š.p. Trnava
+Západoslovenské tehelne Pezinok, š.p.
+ZELENINA Komárno, š.p.
+ZELENINA Trnava, š.p.
+ZŤS Rimavská Sobota, š.p.
+Štátne podniky v likvidácii
+BANE, š. p. v likvidácii, Spišská Nová Ves
+SEP Bratislava š.p. v likvidácii
+Stredoslovenské kameňolomy a štrkopiesky Žilina, š. p. v likvidácii
+TEXICOM BZ, š. p. v likvidácii, Trenčín
+UTAR, š. p. v likvidácii, Bratislava
+Vojenský opravárenský podnik, š. p. v likvidácii, Nové Mesto nad Váhom
+Východoslovenské kameňolomy a štrkopiesky Spišská Nová Ves, š. p.
+ZDROJ-POTRAVINY-TABAK, š. p v likvidácii, Bratislava
+Zoznam organizácií Ministerstva kultúry SR a ich webové stránky
+Bibiana, medzinárodný dom umenia pre deti
+http://www.bibiana.sk
+Divadelný ústav
+http://www.theatre.sk
+Divadlo Nová scéna
+http://www.nova-scena.sk
+Hudobné centrum
+http://www.hc.sk
+Literárne informačné centrum
+http://www.litcentrum.sk
+Múzeum Slovenského národného povstania
+http://www.muzeumsnp.sk
+Národné osvetové centrum
+http://www.nocka.sk
+Pamiatkový úrad SR
+http://www.pamiatky.sk
+Slovenská filharmónia
+http://www.filharm.sk
+Slovenská knižnica pre nevidiacich Mateja Hrebendu v Levoči
+http://www.skn.sk
+Slovenská národná galéria
+http://www.sng.sk
+Slovenská národná knižnica v Martine
+http://www.snk.sk
+Slovenská ústredná hvezdáreň
+http://www.suh.sk
+Slovenské centrum dizajnu
+http://www.sdc.sk
+Slovenské národné divadlo
+http://www.snd.sk
+Slovenské národné múzeum
+http://www.snm.sk
+Slovenské technické múzeum
+http://www.stm-ke.sk
+Slovenský filmový ústav
+http://www.sfu.sk
+Slovenský ľudový umelecký kolektív
+http://www.sluk.sk
+Štátna filharmónia Košice
+http://www.sfk.sk
+Štátna opera
+http://www.stateopera.sk
+Štátna vedecká knižnica v Banskej Bystrici
+http://www.svkbb.eu
+Štátna vedecká knižnica v Košiciach
+http://www.svkk.sk
+Štátna vedecká knižnica v Prešove
+http://www.svkpo.sk
+Štátne divadlo Košice
+http://www.sdke.sk
+Štátny komorný orchester Žilina
+http://www.slovaksinfonietta.sk
+Umelecký súbor Lúčnica
+http://www.lucnica.sk
+Univerzitná knižnica v Bratislave
+http://www.ulib.sk
+Ústredie ľudovej umeleckej výroby
+http://www.uluv.sk
+Zoznam organizácií Ministerstva obrany SR a ich webové stránky
+Akciové spoločnosti
+HOREZZA, a.s.
+http://horezza.sk
+Letecké opravovne Trenčín, a.s.
+http://www.lotn.sk
+Nemocnica Svätého Michala, a.s.
+http://www.nsmas.sk
+Vojenský opravárenský podnik Nováky, a.s.
+http://www.vopnovaky.sk
+Vojenský opravárenský podnik Trenčín, a.s.
+http://www.voptrencin.sk
+Generálny štáb Ozbrojených síl SR
+http://www.mil.sk
+5. pluk špeciálneho určenia
+http://www.5psu.mil.sk
+Čestná stráž Prezidenta SR
+http://www.cspsr.mil.sk
+Národné centrum EOD
+http://www.eod.mil.sk
+Personálny úrad Ozbrojených síl SR
+http://www.personal.mil.sk
+Úrad hlavného lekára Ružomberok
+http://www.uhl.mil.sk
+Pozemné sily OS SR
+1. Mechanizovaná brigáda PS OS SR, Topoľčany
+http://www.1mb.mil.sk
+11. mechanizovaný prápor 1.MB, Martin
+12. mechanizovaný prápor 1.MB, Nitra
+13. mechanizovaný prápor 1.MB. Levice
+Prápor logistickej podpory 1.MB, Topoľčany
+2. Mechanizovaná brigáda PS OS SR, Prešov
+http://www.mbpo.mil.sk
+21. zmiešaný mechanizovaný prápor 2.MB, Trebišov
+22. mechanizovaný prápor 2.MB, Michalovce
+Prápor logistickej podpory 2.MB, Prešov
+Samohybný delostrelecký oddiel 2.MB, Michalovce
+Prápor podpory velenia PS OS SR, Trenčín
+http://www.prpv.mil.sk
+Prápor RCHBO PS OS SR, Rožňava
+http://www.prrchbo.mil.sk
+Raketometný oddiel PS OS SR, Rožňava
+http://www.rmo.mil.sk
+Veliteľstvo pozemných síl OS SR, Trenčín
+http://www.veps.mil.sk
+Ženijný prápor PS OS SR, Sereď
+http://www.zpr.mil.sk
+Sily výcviku a podpory OS SR
+Prápor výcviku SVaP OS SR, Martin
+http://www.prapv.mil.sk
+Stredisko výcviku leteckých odborností, Prešov
+http://www.svlo.mil.sk
+Výcviková jednotka vojenských misií, Martin
+http://www.vjvm.mil.sk
+Veliteľstvo posádky Bratislava SVaP OS SR
+http://www.vepba.mil.sk
+Veliteľstvo síl výcviku a podpory OS SR, Trenčín
+http://www.vsvap.mil.sk
+Veliteľstvo spoločnej logistickej podpornej skupiny SVaP OS SR, Trenčín
+http://www.vslps.mil.sk
+Dopravný prápor, Hlohovec
+http://www.doppr.mil.sk
+Multifunkčný prápor, Hlohovec
+http://mlfpr.mil.sk
+Opravárenský prápor, Martin
+http://www.oppr.mil.sk
+Základňa mobilných KIS SVaP OS SR, Ružomberok
+http://zamkis.mil.sk
+Základňa stacionárnych KIS SVaP OS SR, Trenčín
+http://www.zaskis.mil.sk
+Zásobovacia základňa ZT 3, Zemianske Kostoľany
+http://www.zzzt3.mil.sk
+Zásobovacia základňa ZT 5, Martin
+http://www.zzzt5.mil.sk
+Vzdušné sily OS SR
+Brigáda velenia, riadenia a prieskumu VzS OS SR, Zvolen
+http://www.bvrps.mil.sk
+Dopravné krídlo generála Milana Rastislava Štefánika VzS OS SR, Kuchyňa
+http://www.lzkuchyna.mil.sk
+Protilietadlová raketová brigáda VzS OS SR, Nitra
+http://www.plrb.mil.sk
+Veliteľstvo vzdušných síl OS SR, Zvolen
+http://www.vvzs.mil.sk
+Vrtuľníkové krídlo generálplukovníka Jána Ambruša VzS OS SR, Prešov
+http://letiskopresov.mil.sk
+Zmiešané krídlo Otta Smika VzS OS SR, Sliač
+http://lzsliac.mil.sk
+Príspevkové organizácie
+Bytová agentúra rezortu ministerstva obrany
+http://www.barmo.sk
+Ústredná vojenská nemocnica SNP Ružomberok
+http://www.uvn.sk
+Rozpočtové organizácie
+Akadémia ozbrojených síl generála Milana Rastislava Štefánika
+http://www.aos.sk
+Ordinariát OS SR a OZ SR
+http://www.ordinariat.sk
+Úrad pre obrannú štandardizáciu, kodifikáciu a štátne overovanie kvality
+http://www.uosksok.sk
+Ústav špeciálneho zdravotníctva a výcviku MO SR Lešť
+http://www.uszv.mil.sk
+Ústredie ekumenickej pastoračnej služby OS SR a OZ SR
+http://www.ustreps.sk
+Vojenské športové centrum DUKLA Banská Bystrica
+http://www.dukla.sk
+Vojenský historický ústav
+http://www.vhu.sk
+Vojenský technický a skúšobný ústav Záhorie
+http://www.vtsu.sk
+Vojenský úrad sociálneho zabezpečenia
+http://www.vusz.mil.sk
+Štátne podniky
+Vojenské lesy a majetky SR, š.p.
+http://www.vlm.sk
+Odštepný závod Kamenica nad Cirochou
+Lesná správa Jovsa
+Lesná správa Kamienka
+Odštepný závod Kežmarok
+http://www.vlm.sk/kontakty-kezmarok
+Lesná správa Ľubica
+Lesná správa Podolinec
+Lesná správa Tichý Potok
+Odštepný závol Malacky
+http://www.vlm.sk/kontakty-malacky
+Lesná správa Jablonove
+Lesná správa Mikulášov
+Lesná správa Riadok
+Riaditeľstvo Pliešovce
+http://www.vlm.sk/kontakty-pliesovce
+Správa lesov Pliešovce
+Topografický ústav plukovníka Jána Lipského
+http://www.topu.mil.sk
+Úrad vojenského letectva MO SR
+http://www.maa.mil.sk/
+Úrad vojenského predstaviteľa stálej delegácie SR pri NATO
+http://www.uvpsdsrnato.mil.sk
+Vojenská polícia
+http://mp.mil.sk
+Centrum výcviku a kynológie vojenskej polície Vlkanová-Hronsek
+Riaditeľstvo vojenskej polície Trenčín
+Útvar vojenskej polície Banská Bystrica
+Expozitúra Lešť
+Expozitúra Liptovský Mikuláš
+Expozitúra Martin
+Expozitúra Zvolen
+Útvar vojenskej polície Bratislava
+Expozitúra Vajnory
+Útvar vojenskej polície Prešov
+Expozitúra Michalovce
+Expozitúra Poprad
+Expozitúra Prešov
+Expozitúra Rožňava
+Expozitúra Trebišov
+Útvar vojenskej polície Topoľčany
+Expozitúra Kuchyňa
+Expozitúra Levice
+Expozitúra Nitra
+Expozitúra Nové Mesto nad Váhom
+Expozitúra Sereď
+Expozitúra Topoľčany
+Expozitúra Trenčín
+Zoznam organizácií Ministerstva pôdohospodárstva a rozvoja vidieka SR a ich webové stránky
+Príspevkové organizácie
+Agentúra pre rozvoj vidieka
+http://www.arvi.sk
+Inštitút vzdelávania veterinárnych lekárov
+http://www.ivvl.sk
+Múzeum vo Svätom Antone
+http://www.msa.sk
+Národné lesnícke centrum (od 01.01.2006)
+http://www.nlcsk.org
+Národné poľnohospodárske a potravinárske centrum (od 1.1.2014)
+Štátne lesy Tatranského národného parku
+http://www.lesytanap.sk
+Štátny veterinárny a potravinový ústav Dolný Kubín (od 1.6.2007)
+http://www.svuba.sk
+Rozpočtové organizácie
+Plemenárska inšpekcia SR
+http://www.pisr.sk
+Pôdohospodárska platobná agentúra
+http://www.apa.sk
+Štátna veterinárna a potravinová správa SR
+http://www.svssr.sk
+Ústav štátnej kontroly veterinárnych biopreparátov a liečiv
+http://www.uskvbl.sk
+Ústredný kontrolný a skúšobný ústav poľnohospodársky
+http://www.uksup.sk
+Špecializovaná štátna správa
+Lesné úrady
+http://www.lesnyurad.sk
+boli k 30.09.2013 zrušené obvodné lesné úrady a od 1.10.2013 ich kompetencie vykonávajú okresné úrady,
+pozemkové a lesné odbory a odbory opravných prostriedkov, referáty pôdohospodárstva
+aktuálne informácie platné od 1.10.2013 sú na http://www.minv.sk
+Pozemkové úrady
+http://www.pozemkovyurad.sk
+boli k 30.09.2013 zrušené obvodné lesné úrady a od 1.10.2013 ich kompetencie vykonávajú okresné úrady,
+pozemkové a lesné odbory a odbory opravných prostriedkov, referáty pôdohospodárstva
+aktuálne informácie platné od 1.10.2013 sú na http://www.minv.sk
+Štátne podniky
+Agroinštitút Nitra, štátny podnik
+http://www.agroinstitut.sk
+Agrokomplex – Výstavníctvo Nitra, štátny podnik (od 1.1.2008)
+http://www.agrokomplex.sk
+Hydromeliorácie, štátny podnik
+http://www.hmsp.sk
+Lesopoľnohospodársky majetok Ulič, štátny podnik
+LESY SR, štátny podnik
+http://www.lesy.sk
+Národný žrebčín Topoľčianky, štátny podnikls
+http://www.nztopolcianky.sk
+Plemenárske služby SR, štátny podnik
+http://www.pssr.sk
+Závodisko, š.p.
+http://www.zavodisko.sk
+
