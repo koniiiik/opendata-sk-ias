@@ -77,9 +77,10 @@ language=python
 
 \section{Úvod}
 
-Data.gov.sk, ďalej len {\bf portál}, je snahou o implementovanie princípov OpenData \ref{opendata} v kontexte Slovenskej republiky. 
+Data.gov.sk, ďalej len {\bf portál}, je snahou o implementovanie princípov Open data \ref{opendata} v kontexte Slovenskej republiky. 
 
 TODO - dopísať nakoniec 
+TODO - motivácia - Open data is an emerging idea most developed in the UK and USA ... in SK its shit ... 
 TODO - prejsť emaily od Jany, Jána, Hanyho a AFP. 
 
 \subsection{Cieľ práce}
@@ -96,8 +97,8 @@ Aby sme sa v tematike zorientovali, tak sme komunikovali s relevantnými subjekt
 
 \begin{itemize} 
   \item Úrad splnomocnenca vlády SR pre rozvoj občianskej spoločnosti - \emph{správca portálu} data.gov.sk .
-  \item Aliancia Fair Play - zverejňujú verejné štátne dáta na ich portály datanest (\ref{datanest}), ktoré sú vhodné pre poukázanie korupcie verejných činiteľov. 
-  \item OpenData.sk (\ref{opendata-sk}) - zaoberajú sa podobnou problematikou ako data.gov.sk. 
+  \item Aliancia Fair Play - zverejňujú verejné štátne dáta na ich portály datanest (\cite{datanest}), ktoré sú vhodné pre poukázanie korupcie verejných činiteľov. 
+  \item OpenData.sk (\cite{opendata-sk}) - zaoberajú sa podobnou problematikou ako data.gov.sk. 
   \item Foaf.sk a Minio.sk - poskytujú rozhranie pre spracované verejné štátne dáta, ktoré je efektívne použiteľné.  
 \end{itemize} 
 
@@ -111,97 +112,36 @@ Napríklad AFP získala užitočné datasety pomocou opakovaných infožiadosí,
 
 Vzhľadom na obmedzený rozsah nášho projektu a prakticky neobmedzený rozsah práce na portály sme boli nútení si vybrať časť na ktorej budeme pracovať. Ostatné nápady sú popísané v časti \ref{future-work}. 
 
-Vychádzali sme z dokumentu \ref{525} vypracovaným skupinou opendata.sk, ktorý obsahuje zoznam 525 datasetov, ktoré by bolo \emph{užitočné} zverejniť. Zvolili sme nasledovný postup:  
+Vychádzali sme z dokumentu \cite{525} vypracovaným skupinou opendata.sk, ktorý obsahuje zoznam 525 datasetov, ktoré by bolo \emph{užitočné} zverejniť. Zvolili sme nasledovný postup:  
 \begin{itemize} 
 \item Exportovať zoznam do SQL DB a vyčištiť ho. 
 \item Previazať databázu s data.gov.sk a zistiť, ktoré datasety už sú získané. 
 \item Previazať s výsledkami manuálnej kontroly data.gov.sk z maraca 2014-03. 
-\item Zautomatizovať manuálnu kontrolu z predošlého bodu, t.j. či tam dáta sú, aké majú chyby a tak ďalej. Inšpirovali sme sa \ref{hany}. 
+\item Zautomatizovať manuálnu kontrolu z predošlého bodu, t.j. či tam dáta sú, aké majú chyby a tak ďalej. Inšpirovali sme sa jednoduchým skriptom od \cite{hany}. 
 \item Pridať \emph{5-star} rating kvality datasetov. Podobná funkcionalita existuje v plugine \emph{ckanext-qa} pre CKAN, systém pre zverejnenie open data.  
 \end{itemize} 
 
 \subsection{Implementácia}
 
+Najprv sme skonvertovali zoznam 525 užitočných datasetov do SQLite databázy $D$, ktorú sme následne prečistili. Napr. opravili niektoré preklepy, aby boli dva sémanticky ekvivalentné hodnoty rovnaké aj syntakticky. 
 
-BEGIN EDO 
-K tomuto Edovmu iba follow-up, že dva z tých troch datasetov riešim ja spolu s maintainermi (zle implementujú HTTP), tretie je iba zle zadaná URL v CKANe.
+Využili sme CKAN REST API, aby sme získali aktuálny stav data.gov.sk. Vychádzajúc z API a databázy $D$ sme implementovali nasledovné dva skripty. 
 
-Ja som práve pushol upravenú verziu môjho skriptu spolu s výsledkami pre viac ako polovicu toho XLS zoznamu. Viac už fakt takto v noci nevládzem. Aj by som tento mail hodil na wiki, ale ani na to si u6 netrúfam; feel free hodiť to tam zajtra.
+\paragraph{check.py}
+Keďže data.gov.sk obsahuje iba odkazy na datasety, je nutné kontrolovať, či sú odkazy platné. V tomto skripte k danému datasetu získame všetky linky a HTTP requestom overíme, či naozaj existuje. Navyše kontrolujeme hlavičky requestu a snažíme sa uhádnuť reálnu príponu súboru, ktor8 sa môže líšiť. Ďalej sa snažíme zistiť, či išlo o redirect a či stránka obsahuje formulár, ktorý je rozhraním pre dataset. Na základe týchto údajov aproximujeme kvalitu datasetu podľa štandardnu popísaného v časti \ref{zakon-kvalita}. 
+%TODO? K tomuto Edovmu iba follow-up, že dva z tých troch datasetov riešim ja spolu s maintainermi (zle implementujú HTTP), tretie je iba zle zadaná URL v CKANe.
 
-Ak sa niekomu chce pokračovať a dochrúmať zvyšok, stačí naimportovať do databázy ten dump, čo som zavesil, a pustiť skript. Potrebuje to Pythoniu knižnicu requests, zvyšok by mala byť štandardná knižnica.
+\paragraph{vyhladavac.py} 
+Tento semi-automatický skript sa snaží prepojiť záznamy databázy $D$ so záznammi na data.gov.sk. Pre každý záznam databázy $D$ vyhľadá pomocou CKAN API datasety s podobným názvom. V prípade, že výsledkom je viacero, tak skript ponúkne všetky možnosti. Tieto prepojenia sú ukladané do našej databázy $D$. 
 
-Postup je asi takýto: pokiaľ nájde match samé od seba, super, unless je ten match nejaký príliš generický, napríklad „Faktúry,“ vtedy treba ručne skontrolovať, čo našiel a overiť, či to je napr. od toho istého ministerstva alebo niečo. Ak nie je, tak ručne umazať z DB.
+Niekedy sa stane, že v CKANe daný dataset skutočne je, ale skript ho nenájde. Napr. môže byť rozdelený na viacero CKANových datasetov. Takéto prípady sme označili za neexistujúce a zapísali do \href{https://github.com/koniiiik/opendata-sk-ias/blob/master/problematicke_id}{problematicke\_id} spolu s popisom, čo sa pokazilo. Tieto prípady sa dajú vyriešiť aj ručne keďže ich je pomerne málo. Nakoniec sme sa neexistujúce prípady snažili priradiť ručne. Z databázy zaujímavých sme zistili pod ktoré ministerstvo patria a použili ako filter na data.gov.sk.
 
-Pokiaľ nenájde match, vypíše zoznam, čo vrátil CKAN search, buď zadajte číslo, ak sa niektorý zhoduje, alebo čokoľvek nečíselné a vtedy označí, že match nie je.
+%Ja som práve pushol upravenú verziu môjho skriptu spolu s výsledkami pre viac ako polovicu toho XLS zoznamu. Viac už fakt takto v noci nevládzem. Aj by som tento mail hodil na wiki, ale ani na to si u6 netrúfam; feel free hodiť to tam zajtra.
 
-Občas sa stane, že v CKANe daný dataset skutočne je, ale skript ho nenájde. Napr. môže byť rozsekaný na viacero CKANových datasetov. Takéto prípady som označil, že nie je, a napísal do problematicke\_id spolu s popisom, čo sa posralo. Takéto veci sa potom budú dať doriešiť aj ručne, nie je ich až tak veľa.
-
-Môj workflow bol asi taký, že otvorený XLS zoznam, otvorený CKAN, pustený skript. Keď sa niečo nenašlo, tak som pozrel, od akého ministerstva to malo byť, pozrel som na zoznam datasetov daného ministerstva v CKANe (tam sú ministerstvá ako skupiny) a skúsil sa z toho vysomáriť.
-
-  - čo ste riešili? (vstup, výstup)
-TODO - Edo, Johnny 
-
-VSTUP: zoznam datasetov na data.gov.sk
-VYSTUP: pre každý dataset, prejsť všetky linky, zistiť, či žijú a či odkazujú na nejaký súbor.
-      Ak neodkazujú na súbor, zistil, či bol redirect, ak nebol je to pravdepodobne webový formulár. 
-      Ak je výstup súbor, pozrieť content disposition, príponu v prehliadači a content-type. Uhádnuť príponu súboru a na základe 
-       jednoduchej heuristiky prideliť počet hviezdičiek podľa http://5stardata.info/
-
-  - HLAVNE: aké sú výsledky? (štatistiky, tabuľka, graf) 
-
-pokiaľ si správne spomínam Maťo slúbil to spracovať do štatistík. 
-Aktuálny dump databázy pushnem čoskoro, keď dobehne skript.
-
-
-  - čo bolo najťažšie? 
-  - 1-3 zaujímavostí (kľudne hate, ... aby to oživilo prezentáciu :P)
-
-srali ma akurát tie dva datasety na ktorých to padalo a nevedel som zistiť prečo.
-END EDO 
-
-BEGIN JOHNNY
-
-korelácia „zoznamu datasetov štátnej správy“ a obsahu CKANu
-
->   - ako ste to vyriešili? (prípadne linky na github)
-
-na githube vyhladavac.py, semiautomatický skript; ešte večer pridám
-jeden na ručné doplácanie tých špeciálnych prípadov vypísaných bokom
-
-Teda, jedine že by ma niekto predbehol a doplátal to do tej databázy
-skôr, ako sa večer vrátim, nie je ich až tak veľa.
-
->   - HLAVNE: aké sú výsledky? (štatistiky, tabuľka, graf)
-
-Potom sa dá ešte pozrieť, koľko toho je v CKANe takého, čo nebolo
-v pláne.
-
->   - čo bolo najťažšie?
-
-CKAN. Aspoň dvakrát sa stalo, že bolo viacero datasetov, ktorých názvy
-sa líšili iba v posledných pár slovách. Search na jeden dataset mi
-vrátil všetky okrem toho jedného, ktorý som chcel. Jeden takýto pár
-bol 313, 314 a jedna trojica 1716, 1717, 1718. KTO TOTO KÓDIL?!
-
->   - 1-3 zaujímavostí (kľudne hate, ... aby to oživilo prezentáciu :P)
-
-Je fascinujúce, ako si niektoré ministerstvá dali záležať na tom, aby
-sa názvy v CKANe líšili od tých v zozname datasetov. Význam ten istý,
-ale úplne inými slovami.
-
-A potom tie veci, čo som dával na github ako random pozorovania...
-
-A toto som už vravel Petržovi, mohli by sme tam mať takú dvojicu
-slidov, najprv „Čo si pod open data predstaví politicky aktívny
-človek“, tam dať nejaké veci ako zoznam zmlúv, verejných obstarávaní,
-platy sudcov, rozsudky, ..., a potom „Čo si pod open data predstavuje
-naša štátna správa“ a tam register certifikovaných hnojív, zoznam
-ovocných sadov, databáza hospodárskych zvierat, ... d-: Tak na
-oživenie. d-:
-
-END JOHNNY 
-
-
+%Ak sa niekomu chce pokračovať a dochrúmať zvyšok, stačí naimportovať do databázy ten dump, čo som zavesil, a pustiť skript. Potrebuje to Pythoniu knižnicu requests, zvyšok by mala byť štandardná knižnica.
+Zaujímavosťou boli problémy s názvami datasetov. Napr. dvakrát sa stalo, že bolo viacero datasetov, ktorých názvy sa líšili iba v posledných pár slovách a CKAN search na jeden dataset vrátil všetky okrem toho hľadaného\footnote{
+Napr. dvojica 313, 314 a jedna trojica 1716, 1717, 1718.
+}. Alebo niektoré datasety mali rozdielne názvy na data.gov.sk a v databáze $D$, napriek tomu, že význam bol ten istý. 
 
 \section{Výsledky}
 
@@ -218,36 +158,39 @@ TODO (must!): koľko \% tých datasetov, čo mali byť zverejnené, tam skutočn
 TODO - na koniec 
 
 \subsection{Budúca práca} 
-\ref{future-work}
+\label{future-work}
 
-Zobrať názvy z \ref{525} a vyhľadať chýbajúce datasety na slovenskom Internete. 
+Zobrať názvy z \cite{525} a vyhľadať chýbajúce datasety na slovenskom Internete (nad rámec rozsahu našej práce). 
 
-Vygenerovať zoznam štátnych inštitúcií a automaticky vyhľadávať potenciálne datasety.
+Vygenerovať zoznam štátnych inštitúcií a automaticky vyhľadávať potenciálne datasety (nad rámec rozsahu našej práce).
 
-Obe boli nad rámec rozsahu našej práce. 
-
-\section{Referencie} 
-\begin{itemize} 
-  \item \label{proj} \href{https://github.com/koniiiik/opendata-sk-ias}{Repozitár násho projektu s dokumentáciou}. %TODO - ensure only zverejnitelne
-  \item \label{525} \href{http://www.otvorenavlada.gov.sk/datasety-statnej-spravy/}{Zoznam datasetov \emph{užitočných} na zverejnenie}.
-  \item \label{hodnotenie} \href{http://www.otvorenavlada.gov.sk/navrh-hodnotiacej-spravy-iniciativy-pre-otvorene-vladnutie-v-slovenskej-republike/}{Návrh hodnotiacej správy Iniciatívy pre otvorené vládnutie v Slovenskej republike}.
-  \item \label{kvalita} \href{http://www.zbierka.sk/sk/predpisy/55-2014-z-z.p-35621.pdf}{Výnos 55/2014} aj o kvalite OpenData. 
-  \item \label{hany} \href{https://github.com/hanecak/data.gov.sk-link-check/}{Link check} datasetov portálu. 
-  \item \label{datanest} \href{http://datanest.fair-play.sk/pages/index}{Datanest} Aliancie Fair play. 
-  \item \label{opendata-sk} \href{http://opendata.sk/liferay/studia-open-data-portal}{OpenData.sk}
-\end{itemize} 
+TODO niečo ďalšie 
 
 
-\section{Príloha - Vysvetlenie pojmov}
-\subsection{OpenData} 
+\renewcommand{\refname}{Literatúra}
+\phantomsection
+\addcontentsline{toc}{section}{Literatúra}
+\begin{thebibliography}{99}
+  \bibitem{proj} \url{https://github.com/koniiiik/opendata-sk-ias} - Repozitár nášho projektu s dokumentáciou. %TODO - ensure only zverejnitelne
+  \bibitem{525} \url{http://www.otvorenavlada.gov.sk/datasety-statnej-spravy/} - Zoznam datasetov \emph{užitočných} na zverejnenie.
+  \bibitem{hodnotenie} \url{http://www.otvorenavlada.gov.sk/navrh-hodnotiacej-spravy-iniciativy-pre-otvorene-vladnutie-v-slovenskej-republike/} - Návrh hodnotiacej správy Iniciatívy pre otvorené vládnutie v Slovenskej republike.
+  \bibitem{kvalita} \url{http://www.zbierka.sk/sk/predpisy/55-2014-z-z.p-35621.pdf} - Výnos 55/2014 aj o kvalite Open data. 
+  \bibitem{hany} \url{https://github.com/hanecak/data.gov.sk-link-check/} - Základná kontrola odkazov datasetov portálu CKAN. 
+  \bibitem{datanest} \url{http://datanest.fair-play.sk/pages/index} - Datanest Aliancie Fair play. 
+  \bibitem{opendata-sk} \url{http://opendata.sk/liferay/studia-open-data-portal} - OpenData.sk. 
+  \bibitem{opendata-wiki} \url{http://en.wikipedia.org/wiki/Open_data} - Definícia open data na Wikipédií. 
+\end{thebibliography}
+
+
+\section*{Príloha - Vysvetlenie pojmov} 
+\subsection*{Open data} 
 \label{opendata} 
 TODO prelozit 
-Open data is the idea that certain data should be freely available to everyone to use and republish as they wish, without restrictions from copyright, patents or other mechanisms of control.[1] The goals of the open data movement are similar to those of other "Open" movements such as open source, open hardware, open content, and open access. The philosophy behind open data has been long established (for example in the Mertonian tradition of science), but the term "open data" itself is recent, gaining popularity with the rise of the Internet and World Wide Web and, especially, with the launch of open-data government initiatives such as Data.gov and Data.gov.uk.
+Open data je myšlienka, že niektoré dáta by mali byť dostupné pre každého na akékoľvek použitie, bez akýchkoľvek licencií, patentov alebo iných kontrolných mechanizmov. Ciele open data sú podobné ako iných \emph{otvorených} spoločností, ako sú open source, open hardware a iné. Filozofia open data je stará ale termín \emph{open data} je súčasný a naberá na popularite s rastom Internetu a WWW. Najpokričlejšími portálmi sú data.gov a data.gov.uk (\cite{opendata-wiki}). 
 
-
-\subsection{Hodnotenie kvality datasetov}
+\subsection*{Hodnotenie kvality datasetov}
 \label{zakon-kvalita} 
-Kvalitu dát sme hodnotili podľa \href{http://www.zbierka.sk/sk/predpisy/55-2014-z-z.p-35621.pdf}{výnosu 55/2014} popisujúci aj \emph{kvalitu datasetu poskytovaného povinnou osobou}, ktoré je rozdelené na šesť úrovní: 
+Kvalitu dát sme hodnotili podľa \emph{výnosu 55/2014} (\cite{kvalita}) popisujúci aj \emph{kvalitu datasetu poskytovaného povinnou osobou}, ktoré je rozdelené na šesť úrovní: 
 \begin{itemize} 
 \item úroveň 0, pri ktorej nie je dataset poskytovaný
 v elektronickej forme,
@@ -267,14 +210,10 @@ vzťahov sa používajú refencovateľné identifikátory,
 v písmene e) a dataset a jeho interné a externé
 vzťahy majú charakter identifikátormi prepojených
 údajov.
+\end{itemize} 
 
-Ak sa údaje poskytujú pre automatizované spra-
-covanie, štandardom kvality datasetu poskytovaného
-povinnou osobou je aj ich poskytovanie ako datasetu
-s otvorenými údajmi podľa § 53 a v kvalite najmenej
-úrovne 3.
-
-
+Ak sa údaje poskytujú pre automatizované spracovanie, štandardom kvality datasetu poskytovaného
+povinnou osobou je aj ich poskytovanie ako datasetu s otvorenými údajmi podľa § 53 a v kvalite najmenej úrovne 3.
 
 
 \end{document} 
