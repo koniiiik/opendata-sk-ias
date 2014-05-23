@@ -9,6 +9,7 @@
 \usepackage{amssymb} 
 \usepackage{hyperref} 
 \usepackage{multicol} 
+\linespread{1.5}
 
 \lstset{
 language=python
@@ -135,6 +136,48 @@ Môj workflow bol asi taký, že otvorený XLS zoznam, otvorený CKAN, pustený 
 
 
 \section{Výsledky}
+
+V tejto časti prezentujeme niektoré vlastnosti datasetov z \ref{525}. Pre každý dataset z tohto zdroja je známe, či je zo zákona zverejniteľný a či rezort súhlasí s jeho zverejnením.
+
+Datasety verejnej správy, ktoré poskytli jednotliví prevádzkovatelia majú rôzne formáty. Obrázok \ref{formaty} ukazuje zastúpenie jednotlivých formátov v zverejniteľných datasetoch. Dá sa vidieť, že najväčší podiel na zverejniteľných datasetoch majú tabuľky programu Microsoft Excel. Nasledujú databázy rôznych druhov, pdf dokumenty a dokumenty programu Microsoft Word. 
+
+\begin{figure}
+\center \includegraphics[width=9cm]{dataset_formaty}
+\caption{Zastúpenie jednotlivých formátov medzi zverejniteľnými datasetmi, s ktorých zverejnením rezorty súhlasili.}
+\label{formaty}
+\end{figure}
+
+Ďalej ukážeme, ako je na tom zverejňovanie datasetov pre jednotlivých prevádzkovateľov. Obrázok \ref{zverejnene} ukazuje, aká časť zverejniteľných datasetov, s ktorých zverejnením rezort súhlasil, je zverejnená na data.gov.sk. Dá sa vidieť, že väčšina prevádzkovateľov súhlasila so zverejnením viacerých datasetov ako je naozaj zverejnených.
+
+\begin{figure}
+\center \includegraphics[width=14cm]{zverejnene_prevadzkovatel}
+\caption{Zverejené a zverejniteľné datasety pre jednotlivých prevádzkovateľov.}
+\label{zverejnene}
+\end{figure}
+
+Pri hľadaní dôvodu sme sa pozreli na formáty zverejniteľných, ale ešte nezverejnených datasetov. Obrázok \ref{nezverejnene_formaty} ukazuje distribúciu jednotlivých formátov. Dá sa vidieť, že medzi nezvernenými datasetmi je najviac datasetov vo formáte databázy. Predpokladáme, že export dát z databázy v otvorenom formáte často nie je taký jednoduchý.
+
+\begin{figure}
+\center \includegraphics[width=14cm]{nezverejnene_formaty}
+\caption{Zastúpenie formátov medzi nezverejnenými, ale zverejniteľnými datasetmi.}
+\label{nezverejnene_formaty}
+\end{figure}
+
+Na koniec sa pozrieme na stav datasetov zverejnených na data.gov.sk. Obrázok \ref{stars} ukazuje hodnotenie datasetov podľa 5 hviezdičkového hodnotenia z \ref{5star}. Vidíme, že väčšina datasetov má 3 hviezdičky. To značí datasety, ktoré majú otvorený formát a sú štrukturované. Treba ale myslieť na to, že v skutočnosti nemá väčšina datasetov ani jednu hviezdičku, lebo nemajú otvorenú licenciu.
+
+Tiež sa pozrieme na dostupnosť jednotlivých datasetov. Obrázok \ref{status} ukazuje, aký je stav datasetov na data.gov.sk. Vidíme, že väčšina datasetov je v poriadku dostupná. Ale niekoľko datasetov nie je dostupných. Tak isto existujú na data.gov.sk datasety, ktorých zdroj presmeruje na inú stránku. Tak isto je na obrázku \ref{status} ukázané, koľko datasetov je prístupných iba po vyplnení webového formulára.
+
+\begin{figure}
+\center \includegraphics[width=14cm]{stars}
+\caption{Počty datasetov pre jednotlivé hodnotenia.}
+\label{star}
+\end{figure}
+
+\begin{figure}
+\center \includegraphics[width=14cm]{status}
+\caption{Počty datasetov v jednotlivých stavoch.}
+\label{status}
+\end{figure}
 
 TODO - počkať na Maťa 
 
