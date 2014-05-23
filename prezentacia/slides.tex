@@ -18,6 +18,7 @@
 \usepackage{listings}
 \usepackage{graphicx}
 \usepackage{array}
+\usepackage{epsfig}
 %\usepackage[style=alphabetic,maxbibnames=2]{biblatex}
 \usepackage{tikz}
 \usepackage{amsmath}
@@ -32,38 +33,7 @@
 Kolínek, Michal Petrucha}
 \institute{FMFI UK}
 \date{\year}
-%\subject{\fieldnumber{} \studyprogram}
 
-
-\lstset{numberstyle=none, basicstyle=\footnotesize\ttfamily,
-showstringspaces=false, escapechar=\%}
-
-
-% If you have a file called "university-logo-filename.xxx", where xxx
-% is a graphic format that can be processed by latex or pdflatex,
-% resp., then you can add a logo as follows:
-
-% \pgfdeclareimage[height=.7cm]{university-logo}{img/komlogo-new}
-% \logo{\pgfuseimage{university-logo}}
-
-
-% Uzitocne:
-%   \begin{columns}
-%      \column{.7\textwidth}
-%      \column{.3\textwidth}
-%   \end{columns}
-
-\let\eps=\varepsilon % definujeme si pekne epsilon
-\let\then=\Rightarrow % krok odvodenia
-\let\xor=\oplus
-
-% Potrebujeme operator na najmensi spolocny nasobok.
-\DeclareMathOperator{\lcm}{lcm}
-\def\pkp#1{{\rm PKP}_{#1}}
-\def\blank{{\bf B}}
-\def\strieska{~\hat{}~}
-\def\E{\ensuremath{\mathrm{E}}}
-\def\Z{\ensuremath{\mathbb{Z}}}
 
 \begin{document}
 
@@ -74,6 +44,7 @@ showstringspaces=false, escapechar=\%}
 \begin{frame}{Čo je open data?}
     \begin{itemize}
         \item myšlienka, že isté typy dát by mali byť voľne dostupné
+              v~strojovo spracovateľnej podobe
         \item tiež označenie pre takéto dáta
         \item vedecké dáta (genómy, meteorologické merania, \dots)
         \item štátna správa, verejný sektor
@@ -89,7 +60,48 @@ showstringspaces=false, escapechar=\%}
     \end{itemize}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{Vznik nových datasetov}
+    \begin{itemize}
+        \item Úrad splnomocnenca tlačí na ministerstvá
+        \item ministerstvá kladú odpor
+        \item vyjednávacia pozícia
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Naše ciele}
+    \begin{itemize}
+        \item porovnať plánovaný zoznam datasetov s~obsahom CKAN
+        \item kontrola platnosti záznamov
+        \item hodnotenie kvality zverejnených datasetov
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Prvý pohľad na CKAN}
+    \begin{columns}
+        \column{.5\textwidth}
+            \begin{block}{Ako sme si open data predstavovali my}
+                \item zoznamy sudcov a~ich platov
+                \item zoznamy zmlúv a~verejných obstarávaní
+                \item \dots
+            \end{block}
+        \column{.5\textwidth}
+            \visible<2>{
+            \begin{block}{Ako open data poňala štátna správa}
+                \item zoznam certifikovaných hnojív
+                \item register ovocných sadov
+                \item databáza hospodárskych zvierat
+            \end{block}
+            }
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Plán vs. realita}
+    \begin{itemize}
+        \item 525 plánovaných datasetov
+        \item CKAN obsahuje 205 datasetov
+        \item veľa nezverejniteľných (osobné údaje, \dots)
+    \end{itemize}
+    \includegraphics[width=\textwidth]{zverejnene_prevadzkovatel}
 \end{frame}
 
 \end{document}
