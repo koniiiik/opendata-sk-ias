@@ -1,0 +1,95 @@
+\documentclass[slovak,14pt,utf8]{beamer}
+
+\mode<presentation>
+{
+   \usetheme{Warsaw}
+%   \usetheme{Pittsburgh}
+    \usecolortheme{seahorse}
+
+   \setbeamercovered{transparent}
+   \setbeamertemplate{footline}[page number]
+}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[slovak]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{array}
+%\usepackage[style=alphabetic,maxbibnames=2]{biblatex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{changepage}
+
+%\addbibresource{literature.bib}
+
+\title{data.gov.sk}
+%\subtitle{}
+\author[Csiba, Eiben, Kolínek, Petrucha]{Peter Csiba, Eduard Eiben, Martin
+Kolínek, Michal Petrucha}
+\institute{FMFI UK}
+\date{\year}
+%\subject{\fieldnumber{} \studyprogram}
+
+
+\lstset{numberstyle=none, basicstyle=\footnotesize\ttfamily,
+showstringspaces=false, escapechar=\%}
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=.7cm]{university-logo}{img/komlogo-new}
+% \logo{\pgfuseimage{university-logo}}
+
+
+% Uzitocne:
+%   \begin{columns}
+%      \column{.7\textwidth}
+%      \column{.3\textwidth}
+%   \end{columns}
+
+\let\eps=\varepsilon % definujeme si pekne epsilon
+\let\then=\Rightarrow % krok odvodenia
+\let\xor=\oplus
+
+% Potrebujeme operator na najmensi spolocny nasobok.
+\DeclareMathOperator{\lcm}{lcm}
+\def\pkp#1{{\rm PKP}_{#1}}
+\def\blank{{\bf B}}
+\def\strieska{~\hat{}~}
+\def\E{\ensuremath{\mathrm{E}}}
+\def\Z{\ensuremath{\mathbb{Z}}}
+
+\begin{document}
+
+\begin{frame}{}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Čo je open data?}
+    \begin{itemize}
+        \item myšlienka, že isté typy dát by mali byť voľne dostupné
+        \item tiež označenie pre takéto dáta
+        \item vedecké dáta (genómy, meteorologické merania, \dots)
+        \item štátna správa, verejný sektor
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{data.gov.sk}
+    \begin{itemize}
+        \item index odkazov na datasety
+        \item Úrad splnomocnenca vlády SR pre rozvoj občianskej spoločnosti Ministerstvo vnútra SR
+        \item CMS: CKAN
+        \item podľa hodnotiacej správy spred roka je plán nahradiť vlastným systémom (much slovakistan)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\end{frame}
+
+\end{document}
