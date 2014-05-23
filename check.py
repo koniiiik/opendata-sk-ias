@@ -53,11 +53,14 @@ OK = '\033[92m'
 FAIL = '\033[91m'
 ENDC = '\033[0m'
 
-conn = sqlite3.connect('datasety.db')
+use_db= True
+conn = None
 
-conn.isolation_level = None
+if use_db:
+  conn = sqlite3.connect('datasety.db')
+  conn.isolation_level = None
+  conn.execute("delete from ckan_resource;")
 
-conn.execute("delete from ckan_resource;")
 req = requests.get('http://data.gov.sk/api/1/rest/dataset')
 assert req.status_code == requests.codes.ok
 
@@ -79,6 +82,7 @@ for ds_name in response_dict:
     url =  ds_metadata['url'] # id, name, 
     #~ print(ds_name, url)
     req2 = requests.get(url)
+    print(req2.is_redirect, req2.history)
     headers = req2.headers
     content_type = headers['Content-Type']
     mime_type = content_type.split(';')[0]
@@ -89,47 +93,50 @@ for ds_name in response_dict:
     #~ print(req2.url)
     if (req2.status_code != requests.codes.ok):
       print (FAIL + "ERR (" + str(req2.status_code) + ")" + ENDC + " pre dataset:" + ds_name + ", url=" + url)
-      conn.execute("""
-        INSERT into ckan_resource VALUES (?,?,?,?,?,?,?)
-        """,(
-         ds_id, 
-         ds_name,
-         "ERR (" + str(req2.status_code) + ")",
-         url,
-         0,
-         None,
-         mime_type
-      ))
-    else:
-      if 'text/html' in content_type:
-        if req2.is_redirect:
-          err_c = "REDIRECT"
-        else:
-          err_c = "WEB FORM?"
-        print (FAIL + err_c + ENDC + " pre dataset:" + ds_name + ", url=" + url)
+      if use_db:
         conn.execute("""
           INSERT into ckan_resource VALUES (?,?,?,?,?,?,?)
           """,(
            ds_id, 
            ds_name,
-           err_c,
+           "ERR (" + str(req2.status_code) + ")",
            url,
            0,
            None,
            mime_type
         ))
+    else:
+      if 'text/html' in content_type:
+        if len(req2.history) > 0:
+          err_c = "REDIRECT"
+        else:
+          err_c = "WEB FORM?"
+        print (FAIL + err_c + ENDC + " pre dataset:" + ds_name + ", url=" + url)
+        if use_db:
+          conn.execute("""
+            INSERT into ckan_resource VALUES (?,?,?,?,?,?,?)
+            """,(
+             ds_id, 
+             ds_name,
+             err_c,
+             url,
+             0,
+             None,
+             mime_type
+          ))
       else:
         ext = get_file_ext(mime_type, req2.url, cont_disp)
         stars = ohodnot(ext)
         print (OK + "OK" + ENDC + " pre dataset:" + ds_name + " ext:" + ext + " stars:"+ str(stars))
-        conn.execute("""
-          INSERT into ckan_resource VALUES (?,?,?,?,?,?,?)
-          """,(
-           ds_id, 
-           ds_name,
-           "OK",
-           url,
-           stars,
-           ext,
-           mime_type
-        ))
+        if use_db:
+          conn.execute("""
+            INSERT into ckan_resource VALUES (?,?,?,?,?,?,?)
+            """,(
+             ds_id, 
+             ds_name,
+             "OK",
+             url,
+             stars,
+             ext,
+             mime_type
+          ))
