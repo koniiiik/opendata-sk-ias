@@ -95,13 +95,61 @@ Kolínek, Michal Petrucha}
     \end{columns}
 \end{frame}
 
-\begin{frame}{Plán vs. realita}
+\begin{frame}{Plán vs. realita (1)}
     \begin{itemize}
         \item 525 plánovaných datasetov
         \item CKAN obsahuje 205 datasetov
         \item veľa nezverejniteľných (osobné údaje, \dots)
     \end{itemize}
     \includegraphics[width=\textwidth]{zverejnene_prevadzkovatel}
+\end{frame}
+
+\begin{frame}{Plán vs. realita (2)}{Zverejnené vs. nezverejnené}
+    \begin{columns}
+        \column{.5\textwidth}
+        \includegraphics[width=\linewidth]{dataset_formaty}
+
+        Formáty všetkých datasetov
+
+        \column{.5\textwidth}
+        \includegraphics[width=\linewidth]{nezverejnene_formaty}
+
+        Formáty nezverejnených datasetov
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Stav datasetov}
+    \includegraphics[width=\linewidth]{status}
+\end{frame}
+
+\begin{frame}{Hodnotenie kvality (1)}
+    \begin{itemize}
+        \item 5-star rating: \url{http://5stardata.info}
+        \item §51, Výnos 55/2014 o~štandardoch pre informačné systémy verejnej správy
+    \end{itemize}
+    \begin{enumerate}
+        \item dostupné na webe
+        \item strojovo spracovateľné
+        \item otvorený formát
+        \item metadáta umožňujúce odkazovať na záznamy
+        \item odkazy na záznamy v~iných datasetoch
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Hodnotenie kvality (2)}
+    \includegraphics[width=\linewidth]{stars}
+\end{frame}
+
+\begin{frame}{Zopár pozorovaní na záver}
+    \begin{itemize}
+        \item technicky nič nemá ani jednu hviezdičku -- licencie
+        \item CSV/XML $\not\Rightarrow$ strojová spracovateľnosť
+        \item napr. zoznam datasetov: export XLS s~nekonzistentným obsahom do XML
+        \item napr. zoznam faktúr MH: zle štruktúrovaná tabuľka z~Wordu, save as XML,
+              pridáme RDF header
+        \item podobným problémom trpí open data aj v~iných krajinách (.exe na data.gov)
+        \item je potrebný systematickejší prístup: informačné systémy namiesto XLS
+    \end{itemize}
 \end{frame}
 
 \end{document}
